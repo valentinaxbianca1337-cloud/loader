@@ -1,0 +1,27 @@
+name: Build module catalogue
+on:
+  push:
+    branches: [main]
+    paths: ['bootstrap/READY', 'sources/**', 'tools/build.py', 'lib/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build without running Lua
+        run: python tools/build.py
+      - name: Publish generated sources and catalogue
+        run: |
+          git config user.name 'loader-build'
+          git config user.email 'loader-build@users.noreply.github.com'
+          git add sources modules manifest.json BUILD_REPORT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Build loader catalogue [skip ci]'
+            git push origin HEAD:main
+          fi
