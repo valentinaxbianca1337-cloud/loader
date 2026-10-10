@@ -17,6 +17,8 @@ def literal(text):
     eq='='
     while ']'+eq+']' in text:eq+='='
     return '['+eq+'[\n'+text+']'+eq+']'
+# Quarantine a user-reported crashing recovery build; keep original for diagnosis.
+BLOCKED={'annesty': 'User-reported client crash; recovery build not runtime-validated'}
 manifest={'schema':1,'scripts':[]};audit=[]
 for id,name,filename,group in META:
     raw=(originals/filename).read_bytes()
@@ -33,8 +35,8 @@ return {api_version=1,
 '''%(literal(source),json.dumps('@sources/'+filename,ensure_ascii=False))
     target=modules/f'{id}.lua';target.write_text(wrapper,encoding='utf-8',newline='\n')
     digest=hashlib.sha256(target.read_bytes()).hexdigest()
-    manifest['scripts'].append({'id':id,'name':name,'version':digest[:12],'path':f'modules/{id}.lua','group':group,'legacy':True})
-    audit.append({'id':id,'source':filename,'original_bytes':len(raw),'original_sha256':hashlib.sha256(raw).hexdigest(),'module_bytes':target.stat().st_size,'module_sha256':digest,'runtime_validation':'not run in Gamesense','optimization':'managed lifecycle + repeated text metrics cache; donor algorithms unchanged'})
+    if id not in BLOCKED: manifest['scripts'].append({'id':id,'name':name,'version':digest[:12],'path':f'modules/{id}.lua','group':group,'legacy':True})
+    audit.append({'id':id,'source':filename,'original_bytes':len(raw),'original_sha256':hashlib.sha256(raw).hexdigest(),'module_bytes':target.stat().st_size,'module_sha256':digest,'runtime_validation':BLOCKED.get(id,'not run in Gamesense'),'available_in_catalogue':id not in BLOCKED,'optimization':'managed lifecycle + repeated text metrics cache; donor algorithms unchanged'})
 (ROOT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 (ROOT/'BUILD_REPORT.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n')
 print('Built',len(audit),'modules without executing donor code')

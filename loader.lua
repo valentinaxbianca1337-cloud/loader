@@ -1,4 +1,4 @@
--- loader 0.5.1 / Gamesense CS:GO
+-- loader 0.5.2 / Gamesense CS:GO
 -- Trusted module manager, NOT a sandbox. Only use a repository you control.
 -- Modules return { api_version=1, start=function(ctx), stop=function(ctx) }.
 local LegacyBridge=(function()
@@ -158,6 +158,7 @@ end
 return Bridge
 
 end)()
+local BLOCKED={annesty='Quarantined after a reported client crash'}
 local TAB,BOX='LUA','B'
 local KEY='loader_v1_state'
 local REPOSITORY='valentinaxbianca1337-cloud/loader' -- Public owner/repo; bind once a repository is chosen.
@@ -173,6 +174,7 @@ if type(saved)~='table' or saved.schema~=1 then saved={schema=1,repo='',catalogu
 if type(saved.cache)~='table'then saved.cache={}end
 if type(saved.catalogue)~='table'then saved.catalogue={}end
 if type(saved.autoload)~='table'then saved.autoload={}end
+for id in pairs(BLOCKED)do saved.autoload[id]=false;saved.cache[id]=nil end
 local entries,by_id,runtimes={}, {}, {}
 local startup_waiting={}
 local refresh_ui,load_module,stop_module,check_updates
@@ -246,7 +248,7 @@ local function rebuild()
     local keep=selected();keep=keep and keep.id
     entries={builtin};by_id={menu_glow=builtin}
     for _,m in ipairs(saved.catalogue)do
-        if #entries<=LIMIT and valid_meta(m) and not by_id[m.id]then entries[#entries+1]=m;by_id[m.id]=m end
+        if #entries<=LIMIT and valid_meta(m) and not BLOCKED[m.id] and not by_id[m.id]then entries[#entries+1]=m;by_id[m.id]=m end
     end
     local labels,index={},0
     for i,m in ipairs(entries)do labels[i]=m.name;if m.id==keep then index=i-1 end end
@@ -365,6 +367,7 @@ local function start_source(m,source,version)
     return true
 end
 load_module=function(id)
+    if id and BLOCKED[id]then say('Load blocked: '..id..' | '..BLOCKED[id]);return end
     local m=id and by_id[id] or selected();if not m then return end
     if runtimes[m.id] and runtimes[m.id].active then say('Already running. Unload before applying an update.');return end
     if m.group=='aa' then
@@ -409,7 +412,7 @@ check_updates=function()
         local catalogue,seen={},{}
         for _,m in ipairs(data.scripts)do
             if not valid_meta(m) or seen[m.id]then busy=false;say('Invalid or duplicate module in manifest');return end
-            seen[m.id]=true;catalogue[#catalogue+1]={id=m.id,name=m.name,version=m.version,path=m.path,group=m.group,legacy=m.legacy}
+            seen[m.id]=true;if not BLOCKED[m.id]then catalogue[#catalogue+1]={id=m.id,name=m.name,version=m.version,path=m.path,group=m.group,legacy=m.legacy}end
         end
         saved.catalogue=catalogue;saved.last_check=wall_time();rebuild()
         local index,updated,failed=0,0,0

@@ -37,3 +37,7 @@ Edit an original in `sources/` and push to `main`. The Actions workflow regenera
 ## Checks
 
 `TEST_RESULTS.txt` records syntax and synthetic mocked API tests. These test the loader/adapter, not the donors' gameplay behavior. Treat this as an experimental compatibility release and report the exact console error if a donor fails.
+
+## 0.5.2 update
+
+Aetheryx was replaced with the newly supplied 423,998-byte file. Annesty is quarantined after a user-reported client crash: it is excluded from the catalogue, and loader 0.5.2 refuses cached loading/autostart of its ID. Its original remains in `sources/` for diagnosis. This blocks execution; it does **not** establish or fix the native crash cause. The current catalogue has 11 remote scripts plus built-in menu glow. Install the new loader before testing again if an older loader has Annesty saved for autostart.

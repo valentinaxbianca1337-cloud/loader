@@ -29,3 +29,8 @@ PASS bridge isolation, callbacks, reload UI reuse, timer cancellation, shutdown,
 Loader 0.5.1 listbox regression fix:
 PASS native listbox + service row, repeated same-name double clicks, real filled/unfilled state, no checkboxes/buttons/overlay, slow/different-name clicks, startup persistence, GitHub download/cache, update pending, fallback, errors and late HTTP shutdown
 PASS all 12 real catalogue names visible in table-only listbox API
+
+Loader 0.5.2 update tests:
+PASS native listbox + service row, repeated same-name double clicks, real filled/unfilled state, no checkboxes/buttons/overlay, slow/different-name clicks, startup persistence, GitHub download/cache, update pending, fallback, errors and late HTTP shutdown
+PASS 11 available names visible; Annesty excluded even from stale catalogue
+PASS cached Annesty removed and autostart blocked before donor execution

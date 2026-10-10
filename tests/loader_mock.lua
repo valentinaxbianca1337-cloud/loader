@@ -111,8 +111,16 @@ manifests.full={schema=1,scripts={
 fixtures[root.."manifest.json"]={status=200,body="full"}
 for _,m in ipairs(manifests.full.scripts)do fixtures[root..m.path]={status=200,body=good}end
 boot(bound)
-assert(#controls.loader.items==14,"missing catalogue rows")
-for i,m in ipairs(manifests.full.scripts)do assert(controls.loader.items[i+2]:find(m.name,1,true),"missing name: "..m.name)end
-assert(controls["Update Log: None"].value:find("12 module(s) updated",1,true))
+assert(#controls.loader.items==13,"missing catalogue rows or Annesty not quarantined")
+local row=3
+for _,m in ipairs(manifests.full.scripts)do if m.id~="annesty" then assert(controls.loader.items[row]:find(m.name,1,true),"missing name: "..m.name);row=row+1 end end
+assert(controls["Update Log: None"].value:find("11 module(s) updated",1,true))
 fire("shutdown")
-print("PASS all 12 real catalogue names visible in table-only listbox API")
+print("PASS 11 available names visible; Annesty excluded even from stale catalogue")
+
+-- Cached autostart must be blocked before any old Annesty code executes.
+disk.loader_v1_state={schema=1,repo='test-owner/test-repo',catalogue=manifests.full.scripts,cache={annesty={version='old',source='_G.annesty_ran=true;return {api_version=1,start=function()end,stop=function()end}'}},autoload={annesty=true}}
+boot(bound)
+assert(not annesty_ran and not _L.runtimes.annesty and not _L.saved.autoload.annesty and not _L.saved.cache.annesty,'Annesty cached autostart not blocked')
+fire('shutdown')
+print('PASS cached Annesty removed and autostart blocked before donor execution')
