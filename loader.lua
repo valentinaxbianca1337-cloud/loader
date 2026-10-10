@@ -1,4 +1,4 @@
--- loader 0.5.0 / Gamesense CS:GO
+-- loader 0.5.1 / Gamesense CS:GO
 -- Trusted module manager, NOT a sandbox. Only use a repository you control.
 -- Modules return { api_version=1, start=function(ctx), stop=function(ctx) }.
 local LegacyBridge=(function()
@@ -215,7 +215,7 @@ local function refresh_list()
     end
     local fingerprint=table.concat(labels,'\0')
     list_sync=true
-    if last_list_text~=fingerprint then ui.update(list,unpack_fn(labels));last_list_text=fingerprint end
+    if last_list_text~=fingerprint then ui.update(list,labels);last_list_text=fingerprint end
     -- The service row makes two clicks on the same name observable as two changes.
     ui.set(list,0)
     list_sync=false

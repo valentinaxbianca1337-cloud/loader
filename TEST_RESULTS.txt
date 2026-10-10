@@ -25,3 +25,7 @@ PASS /data/loader_release/repo/sources/resistance.lua
 PASS /data/loader_release/repo/sources/rinnegan.lua
 PASS native listbox + service row, repeated same-name double clicks, real filled/unfilled state, no checkboxes/buttons/overlay, slow/different-name clicks, startup persistence, GitHub download/cache, update pending, fallback, errors and late HTTP shutdown
 PASS bridge isolation, callbacks, reload UI reuse, timer cancellation, shutdown, cvar/reference restoration, per-callback text cache
+
+Loader 0.5.1 listbox regression fix:
+PASS native listbox + service row, repeated same-name double clicks, real filled/unfilled state, no checkboxes/buttons/overlay, slow/different-name clicks, startup persistence, GitHub download/cache, update pending, fallback, errors and late HTTP shutdown
+PASS all 12 real catalogue names visible in table-only listbox API
