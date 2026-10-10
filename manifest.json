@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "scripts": [
+    {
+      "id": "aetheryx",
+      "name": "Aetheryx",
+      "version": "c781b389a93e",
+      "path": "modules/aetheryx.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "angelwings",
+      "name": "Angelwings",
+      "version": "2dcfe476e1cb",
+      "path": "modules/angelwings.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "annesty",
+      "name": "Annesty",
+      "version": "c0d9e7bc5ad0",
+      "path": "modules/annesty.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "bluhgang",
+      "name": "Bluhgang",
+      "version": "57a2a261accb",
+      "path": "modules/bluhgang.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "dormant",
+      "name": "Dormant Aimbot",
+      "version": "0911b5330677",
+      "path": "modules/dormant.lua",
+      "group": "helper",
+      "legacy": true
+    },
+    {
+      "id": "emberlash_v2",
+      "name": "Emberlash v2",
+      "version": "5575865e54b2",
+      "path": "modules/emberlash_v2.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "emberlash_legacy",
+      "name": "Emberlash legacy",
+      "version": "f2c798c60915",
+      "path": "modules/emberlash_legacy.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "evalate",
+      "name": "Evalate",
+      "version": "fbbb50157892",
+      "path": "modules/evalate.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "kamidere",
+      "name": "Kamidere",
+      "version": "37616928af98",
+      "path": "modules/kamidere.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "luasense",
+      "name": "Luasense",
+      "version": "3636e4634764",
+      "path": "modules/luasense.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "resistance",
+      "name": "Resistance",
+      "version": "bc4d98034644",
+      "path": "modules/resistance.lua",
+      "group": "aa",
+      "legacy": true
+    },
+    {
+      "id": "rinnegan",
+      "name": "Rinnegan",
+      "version": "7fd910c65c62",
+      "path": "modules/rinnegan.lua",
+      "group": "aa",
+      "legacy": true
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "aetheryx",
+    "source": "aetheryx.lua",
+    "original_bytes": 435210,
+    "original_sha256": "74ea64f4da695fee1a6b7f1f2fc2fcc37d1319d2c3f1c1a9139d215ee9a4bf3c",
+    "module_bytes": 435444,
+    "module_sha256": "c781b389a93e724167a4da040aae396c5205c3a5107a228124e9c080f1ebe936",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "angelwings",
+    "source": "angelwings.lua",
+    "original_bytes": 3124618,
+    "original_sha256": "59308e58c266e286b515ea9b4c55c33389daa0f543371a7ccbddd32d0424f2d8",
+    "module_bytes": 3124854,
+    "module_sha256": "2dcfe476e1cba89f4801d6ad9b3b7a42945ffe9d810a9b4a885948ed0f59ad17",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "annesty",
+    "source": "annesty.lua",
+    "original_bytes": 878955,
+    "original_sha256": "6aec79e91e6d7b1620cc5155af339b6226fef945fc387eae546c41585988b9a0",
+    "module_bytes": 879190,
+    "module_sha256": "c0d9e7bc5ad02e5523864d79a742a7a0d349c51979344d1b5223474aac96ab26",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "bluhgang",
+    "source": "bluhgang.lua",
+    "original_bytes": 146822,
+    "original_sha256": "8b07d39d7f1c21f4634926fc3a83bd0605340be6e953b353711dbdfebb47ad07",
+    "module_bytes": 147056,
+    "module_sha256": "57a2a261accbd6a5790f6bcf9798dada0db753655c29a2ea3994ee1d03a0d4a0",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "dormant",
+    "source": "dormant aimbot (1).lua",
+    "original_bytes": 17341,
+    "original_sha256": "ff1b90275a6e7b1586adf75f3bb2647213b9ad92146234b903ada66354bed080",
+    "module_bytes": 17582,
+    "module_sha256": "0911b533067795b6ede256f9491cf6bf6dd7ad316e927a14aeadfaf41e937eeb",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "emberlash_v2",
+    "source": "emberlash (2).lua",
+    "original_bytes": 384828,
+    "original_sha256": "6970009527df19d087c303cb6418acc615336d7a8b80167da633bc30a6b30ac3",
+    "module_bytes": 385067,
+    "module_sha256": "5575865e54b20a1edcc76cf33bc44b5879f28da35e1cfda5385000531727592c",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "emberlash_legacy",
+    "source": "emberlash.lua",
+    "original_bytes": 9143268,
+    "original_sha256": "2824e82c8b677358b85a42a62c5f493b1c024b3fb4258306abc219cd34040de1",
+    "module_bytes": 9143503,
+    "module_sha256": "f2c798c609157826bde2a6189419fb7a297609395ed12e95a2c2e5c765756743",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "evalate",
+    "source": "evalate.lua",
+    "original_bytes": 2473416,
+    "original_sha256": "5f23c1890a49fbe5de1045b4a41282454047b3b1b3b30bfe32cf13d155c18d11",
+    "module_bytes": 2473649,
+    "module_sha256": "fbbb50157892dcbdb26e69d9c0b81653cb205bd60c0fb8079c1d5c7772e0858e",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "kamidere",
+    "source": "kamidere.lua",
+    "original_bytes": 413666,
+    "original_sha256": "28463b68c95837eb99518fc2e78ed3578c919f0ea48caebb5874dadecef7002b",
+    "module_bytes": 413900,
+    "module_sha256": "37616928af98a68a3baf08b55004db1eecfe39b15c13c12b67b206a9a48caba0",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "luasense",
+    "source": "luasense (2) (1).lua",
+    "original_bytes": 73941,
+    "original_sha256": "574010130f1cfb9602f4dcd015b262fd6634197f1f5bb108e566240fc8c328c6",
+    "module_bytes": 74183,
+    "module_sha256": "3636e463476451b0a1d63cb38efb4aa4615c734b022de0e23f3b7ed16ffca67d",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "resistance",
+    "source": "resistance.lua",
+    "original_bytes": 5785470,
+    "original_sha256": "a17194139da644f8601a5a93fbe0bf56e969551d4ba1fcbda0046dc0b8dda3b7",
+    "module_bytes": 5785706,
+    "module_sha256": "bc4d9803464474b4cb7040c3628ca541c0d617179d731017c648233849d472fb",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  },
+  {
+    "id": "rinnegan",
+    "source": "rinnegan.lua",
+    "original_bytes": 7886857,
+    "original_sha256": "307c478becc89a9f8107d0d3dc0f89c6abd7f6eb632fdae3ced5790b98b94b07",
+    "module_bytes": 7887091,
+    "module_sha256": "7fd910c65c6287d6dd0e966189faca801c7fad7f425e8b30219b358e48f74cd0",
+    "runtime_validation": "not run in Gamesense",
+    "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
+  }
+]
