@@ -292,11 +292,11 @@ local function context(id)
         assert(self.alive and type(event)=='string' and type(fn)=='function','Invalid event registration')
         local wrapped=function(...)
             if not alive or not self.alive then return end
-            local ok,err=pcall(fn,...)
+            local ok,err,a,b,c,d=pcall(fn,...)
             if not ok then
                 local rt=runtimes[id];if rt then rt.active=false;rt.error=clean(err);pcall(rt.module.stop,self)end
                 cleanup(self);say('Module stopped: '..id..' | '..clean(err,65))
-            end
+            else return err,a,b,c,d end
         end
         client.set_event_callback(event,wrapped)
         self.callbacks[#self.callbacks+1]={event,wrapped}
