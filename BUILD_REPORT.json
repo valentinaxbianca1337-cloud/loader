@@ -2,11 +2,12 @@
   {
     "id": "aetheryx",
     "source": "aetheryx.lua",
-    "original_bytes": 435210,
-    "original_sha256": "74ea64f4da695fee1a6b7f1f2fc2fcc37d1319d2c3f1c1a9139d215ee9a4bf3c",
-    "module_bytes": 435444,
-    "module_sha256": "c781b389a93e724167a4da040aae396c5205c3a5107a228124e9c080f1ebe936",
+    "original_bytes": 423998,
+    "original_sha256": "39bbd0844a640801e48f09a96611f17190184c1699a16d51700653e987a8b7b9",
+    "module_bytes": 424232,
+    "module_sha256": "c48524b62ab99c5a70bd8b5de1ae9310b260810531f3661a769d31475c12f9e5",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -17,6 +18,7 @@
     "module_bytes": 3124854,
     "module_sha256": "2dcfe476e1cba89f4801d6ad9b3b7a42945ffe9d810a9b4a885948ed0f59ad17",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -26,7 +28,8 @@
     "original_sha256": "6aec79e91e6d7b1620cc5155af339b6226fef945fc387eae546c41585988b9a0",
     "module_bytes": 879190,
     "module_sha256": "c0d9e7bc5ad02e5523864d79a742a7a0d349c51979344d1b5223474aac96ab26",
-    "runtime_validation": "not run in Gamesense",
+    "runtime_validation": "User-reported client crash; recovery build not runtime-validated",
+    "available_in_catalogue": false,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -37,6 +40,7 @@
     "module_bytes": 147056,
     "module_sha256": "57a2a261accbd6a5790f6bcf9798dada0db753655c29a2ea3994ee1d03a0d4a0",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -47,6 +51,7 @@
     "module_bytes": 17582,
     "module_sha256": "0911b533067795b6ede256f9491cf6bf6dd7ad316e927a14aeadfaf41e937eeb",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -57,6 +62,7 @@
     "module_bytes": 385067,
     "module_sha256": "5575865e54b20a1edcc76cf33bc44b5879f28da35e1cfda5385000531727592c",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -67,6 +73,7 @@
     "module_bytes": 9143503,
     "module_sha256": "f2c798c609157826bde2a6189419fb7a297609395ed12e95a2c2e5c765756743",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -77,6 +84,7 @@
     "module_bytes": 2473649,
     "module_sha256": "fbbb50157892dcbdb26e69d9c0b81653cb205bd60c0fb8079c1d5c7772e0858e",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -87,6 +95,7 @@
     "module_bytes": 413900,
     "module_sha256": "37616928af98a68a3baf08b55004db1eecfe39b15c13c12b67b206a9a48caba0",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -97,6 +106,7 @@
     "module_bytes": 74183,
     "module_sha256": "3636e463476451b0a1d63cb38efb4aa4615c734b022de0e23f3b7ed16ffca67d",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -107,6 +117,7 @@
     "module_bytes": 5785706,
     "module_sha256": "bc4d9803464474b4cb7040c3628ca541c0d617179d731017c648233849d472fb",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   },
   {
@@ -117,6 +128,7 @@
     "module_bytes": 7887091,
     "module_sha256": "7fd910c65c6287d6dd0e966189faca801c7fad7f425e8b30219b358e48f74cd0",
     "runtime_validation": "not run in Gamesense",
+    "available_in_catalogue": true,
     "optimization": "managed lifecycle + repeated text metrics cache; donor algorithms unchanged"
   }
 ]

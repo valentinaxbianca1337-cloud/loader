@@ -4,7 +4,7 @@
     {
       "id": "aetheryx",
       "name": "Aetheryx",
-      "version": "c781b389a93e",
+      "version": "c48524b62ab9",
       "path": "modules/aetheryx.lua",
       "group": "aa",
       "legacy": true
@@ -14,14 +14,6 @@
       "name": "Angelwings",
       "version": "2dcfe476e1cb",
       "path": "modules/angelwings.lua",
-      "group": "aa",
-      "legacy": true
-    },
-    {
-      "id": "annesty",
-      "name": "Annesty",
-      "version": "c0d9e7bc5ad0",
-      "path": "modules/annesty.lua",
       "group": "aa",
       "legacy": true
     },
